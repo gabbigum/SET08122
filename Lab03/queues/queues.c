@@ -29,7 +29,6 @@ int main(int argc, char const *argv[])
     dequeue(&q);
     enqueue(&q, 13);
 
-
     for(int i = 0; i < MAX; i++) {
         printf("%d\n", q.array[i]);
     }
@@ -58,10 +57,6 @@ void leftShiftArray(int* array) {
 }
 
 void enqueue(struct queue* q, int item) {
-    // what should be the logic
-    // put element infront of the queue
-    // put item to the front of the queue -> then shift the whole array to the right
-    // if rear is MAX-1 the queue is full and you cant put anything until you dequeue
     if(q->rear == MAX - 1) {
         printf("The queue is full.\n");
         return;
