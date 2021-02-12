@@ -2,3 +2,7 @@
 *.o
 /bin/
 .vscode/
+*.exe
+*.obj
+*.pdb
+*.ilk
