@@ -36,21 +36,22 @@ int quickSort(int data[], int left, int right) {
 
 int partition(int data[], int left, int right) {
     int pivot = data[right];
-    int index = left - 1;
+    int pIndex = left;
     int temp;
 
-    for(int j = left; j < right; j++) {
-        if(data[j] <= pivot) {
-            index++;
+    for(int i = left; i < right; i++) {
+        if(data[i] <= pivot) {
             // swap
-            temp = data[index];            
-            data[index] = data[j];
-            data[j] = temp;            
+            temp = data[pIndex];
+            data[pIndex] = data[i];
+            data[i] = temp; 
+            pIndex++;
         }
     }
 
-    temp = data[index+1];
-    data[index+1] = data[right];
+    temp = data[pIndex];
+    data[pIndex] = data[right];
     data[right] = temp;
-    return index+1;
+
+    return pIndex;
 }
