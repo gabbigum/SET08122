@@ -50,6 +50,7 @@ public class GraphImpl {
             }
         }
 
+        //TODO fix this
         for (int j = personIndex; j < vertices - 1; j++) {
             for (int i = 0; i < vertices - 1; i++) {
                 matrix[j][i] = matrix[j + 1][i];
